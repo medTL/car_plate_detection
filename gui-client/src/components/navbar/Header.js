@@ -12,15 +12,6 @@ export default function Header() {
         <Navbar.Brand to="/" >Car Plate Detection</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
      
-          <Nav className="me-auto">
-          <Nav.Link >
-              <NavLink to="/"> Detect by url</NavLink>
-             </Nav.Link>
-            <Nav.Link   >
-              <NavLink to="/image">Detect by image</NavLink>
-              </Nav.Link>
-            
-          </Nav> 
 
       </Container>
     </Navbar>
