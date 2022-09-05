@@ -54,6 +54,7 @@ def predictUrl(url):
         if plate.any():
             plate = cv2.resize(plate,(200,150))
             cv2.imwrite('tmp/tmp.png', plate)
+            
             with open("tmp/tmp.png", "rb") as image_stream:
                     
                 read_response = computervision_client.read_in_stream(image_stream,
@@ -70,7 +71,7 @@ def predictUrl(url):
                             for line in text_result.lines:
                                 print(line.text)
                                 text = str(line.text)
-                                        
+                            image_stream.close()           
                             os.remove("tmp/tmp.png")          
                             return text
 

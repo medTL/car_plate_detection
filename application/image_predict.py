@@ -70,7 +70,7 @@ def detectImage(image_path):
                             for line in text_result.lines:
                                 print(line.text)
                                 text = str(line.text)
-                                    
+                            image_stream.close()     
                             os.remove("tmp/tmp.png")            
                             return text
                             

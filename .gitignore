@@ -2,5 +2,9 @@ talel
 talel/
 talel/*
 client/node_modules/
+gui-client/node_modules/
 iot/
 iot
+.vscode
+plate/
+plate
