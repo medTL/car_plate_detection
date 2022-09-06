@@ -4,9 +4,11 @@ import io
 from flask import Flask, request, jsonify
 from application.image_predict import detectImage
 from application.url_predict import predictUrl
+from flask_cors import CORS
 
 
 app = Flask(__name__)
+CORS(app)
 @app.route('/')
 def index():
     return 'Server is app',200

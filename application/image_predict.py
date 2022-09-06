@@ -47,11 +47,13 @@ def detectImage(image_path):
             if item['tagName'] == 'matricule' and item['probability'] > 0.2:
                 box = item['boundingBox']
                 y = int(box['top'] * height)
-                x = int(box['left'] * width)
-                w = int(box['width'] * width)
-                h = int(box['height'] * height)
+                x = int(box['left'] * width )
+                w = int(box['width'] * width +100 )
+                h = int(box['height'] * height + 50)
                 plate = image[y:y+h, x:x+w]
         if plate.any():
+            
+            plate = cv2.cvtColor(plate, cv2.COLOR_BGR2GRAY)
             plate = cv2.resize(plate,(200,150))
             cv2.imwrite('tmp/tmp.png', plate)
             with open("tmp/tmp.png", "rb") as image_stream:
@@ -70,7 +72,7 @@ def detectImage(image_path):
                             for line in text_result.lines:
                                 print(line.text)
                                 text = str(line.text)
-                                    
+                            image_stream.close()     
                             os.remove("tmp/tmp.png")            
                             return text
                             
