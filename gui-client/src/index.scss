@@ -33,6 +33,7 @@ code {
   margin-top: 7rem;
   font-size: 20px;
   font-weight: bolder;
+  position: relative;
 }
 
 .detect-footer {
@@ -48,8 +49,32 @@ code {
   padding: 1em;
   width: 100%;
   text-align: center;
+  margin-top: 1.5em;
 }
 
 .detect-footer .btn:focus {
   border: none !important;
+}
+
+.drag-container {
+  width: 60%;
+  height: 20em;
+  margin: auto;
+  border-radius: 15px;
+  border: 2px dashed #000;
+  display: grid;
+  place-items: center;
+  margin-top: 5em;
+  cursor: pointer;
+}
+
+.image-file-name {
+  position: absolute;
+  left: 1em;
+  top: -1.5em;
+}
+
+.navbar > .container {
+  justify-content: flex-start !important;
+  gap: 1em !important;
 }

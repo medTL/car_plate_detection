@@ -11,8 +11,12 @@ export default function Header() {
       <Container>
         <Navbar.Brand to="/" >Car Plate Detection</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  
+          <NavLink to="/">Detect by url</NavLink>
+    
+  
+        <NavLink to="/image">Detect by image</NavLink>
      
-
       </Container>
     </Navbar>
    
