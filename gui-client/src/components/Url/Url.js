@@ -10,7 +10,7 @@ const [loading, setLoading] = useState(false);
         setLoading(true);
       axios({
         method: 'post',
-        url: 'http://20.160.22.137/url',
+        url: 'http://20.86.185.155/url',
         data: {url: url},
         withCredentials: false,
         headers: {

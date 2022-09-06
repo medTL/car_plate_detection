@@ -16,8 +16,7 @@ export default function Image() {
     let file = acceptedFiles[0];
     console.log(file)
     setName(file.name);
-    const img = await readFile(file);
-    setImage(img);
+    setImage(file);
   }, []);
 
   const readFile = (file) => {
@@ -33,7 +32,7 @@ export default function Image() {
             resolve(event?.target?.result);
           }
         };
-        reader.readAsDataURL(file);
+        reader.readAsArrayBuffer(file);
       })
     );
   };
@@ -41,10 +40,12 @@ export default function Image() {
   const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop});
   const submitImage = () => {
     setLoading(true);
+    let bodyFormData = new FormData();
+    bodyFormData.append('imageData', image);
     axios({
       method: "post",
-      url: "http://20.160.22.137/image",
-      data: image,
+      url: "http://20.86.185.155/image",
+      data: bodyFormData,
       headers: { "Content-Type": "multipart/form-data" },
   })
       .then(function (response) {
