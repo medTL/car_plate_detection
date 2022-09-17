@@ -5,6 +5,7 @@ import promptSync  from "prompt-sync";
 import inquirer from "inquirer";
 import cliSpinners from "cli-spinners";
 import { throws } from "assert";
+// 20.123.130.113:3389
 const prompt = promptSync()
 const predictFromImageFile = (file_path) => {
     try {
@@ -19,7 +20,7 @@ const predictFromImageFile = (file_path) => {
         bodyFormData.append('imageData', file);
         axios({
             method: "post",
-            url: "http://localhost:80/image",
+            url: "http://20.160.22.137/image",
             data: bodyFormData,
             headers: { "Content-Type": "multipart/form-data" },
         })
@@ -48,7 +49,7 @@ const predictFromUrl = (url) => {
     try {
         axios({
             method: "post",
-            url: "http://localhost:80/url",
+            url: "http://20.160.22.137/url",
             data: { "url": url },
             headers: { "Content-Type": "application/json" },
         })

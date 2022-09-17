@@ -2,7 +2,12 @@ talel
 talel/
 talel/*
 client/node_modules/
+gui-client/node_modules/
 iot/
 iot
+<<<<<<< HEAD
+=======
+.vscode
+>>>>>>> 20c3d93c3b23cfacdc122b382357f4862f8504c1
 plate/
 plate

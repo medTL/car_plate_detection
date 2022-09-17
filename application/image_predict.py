@@ -15,7 +15,7 @@ import sys
 import requests
 
 subscription_key = "06ed28182bb24e23ad36f6debb619e6d"
-endpoint = "https://southcentralus.api.cognitive.microsoft.com/customvision/v3.0/Prediction/7444c6af-a726-4911-9344-53f9e428cf1f/detect/iterations/Iteration7/image"
+endpoint = "https://southcentralus.api.cognitive.microsoft.com/customvision/v3.0/Prediction/7444c6af-a726-4911-9344-53f9e428cf1f/detect/iterations/Iteration9/image"
 subscription_key_ocr = "35bbf187f138426dbb7c9563e93c1d31"
 endpoint_ocr = "https://ocrp.cognitiveservices.azure.com/"
 computervision_client = ComputerVisionClient(
